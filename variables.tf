@@ -19,12 +19,20 @@ variable "vcn_cidr_block" {
 }
 
 variable "availability_domain_number" {
-  default = 1
+  default = 2
 }
 
 variable "instance_shape" {
   # Free-Tier is VM.Standard.E2.1.Micro
-  default = "VM.Standard.E2.1.Micro"
+  default = "VM.Standard.A1.Flex"
+}
+
+variable "instance_shape_config_memory_in_gbs" {
+  default = "24"
+}
+
+variable "instance_shape_config_ocpus" {
+  default = "4"
 }
 
 
@@ -51,7 +59,7 @@ variable "instance_image_ocid" {
     sa-saopaulo-1    = "oci1.image.oc1.sa-saopaulo-1.aaaaaaaaonwl3zjp6cxf3kbhpyipyufhmyymdimtfelzky6r745zojytab6a"
     uk-gov-london-1  = "oci1.image.oc4.uk-gov-london-1.aaaaaaaagdq7eit7otaqpbo5tdeh2avqvrszszw3iqojva5kl5ztoxx7ypqa"
     uk-london-1      = "oci1.image.oc1.uk-london-1.aaaaaaaamnz6jzdyj7yyfeh6vyoydjw4e6eigus6qnwuwh2ugu7agbnnvr5a"
-    us-ashburn-1     = "ocid1.image.oc1.iad.aaaaaaaa4zmhh435fbohrt6cwwomyfkcnrrr3ce2czs2qs52eadlu7mr45va"
+    us-ashburn-1     = "ocid1.image.oc1.iad.aaaaaaaaotleo7p3oe47r5jp2ekzbikxwchgdqyzeejsl6wlcumwc64e3oza"
     us-gov-ashburn-1 = "oci1.image.oc3.us-gov-ashburn-1.aaaaaaaask3s2dqo632wkaiwxzzhnrdpfhcdzjc4xu7nos4msasbutd5ct6q"
     us-gov-chicago-1 = "oci1.image.oc3.us-gov-chicago-1.aaaaaaaadgg6aqmf5daphzbhcimv2hs3gxgaigflkcvmi64wwcqmqa7p3rjq"
     us-gov-phoenix-1 = "oci1.image.oc3.us-gov-phoenix-1.aaaaaaaalqzdesgljdqnauzgbttxlnpp4ejyrcq5tj4gj36ehnd7xncc6y6q"
